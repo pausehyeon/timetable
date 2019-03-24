@@ -14,8 +14,8 @@ $ ./gradlew build
 2. Spring Boot Application으로 실행
 
 3. http://localhost:8080/ 접속하여 아래 화면 확인
-![Timetable Screenshot](Screen1.png)
-![Timetable Screenshot](Screen2.png)
+![Timetable Screenshot](Screen1.jpg)
+![Timetable Screenshot](Screen2.jpg)
 
 ## Built With
 * [Spring Boot](https://spring.io/projects/spring-boot) - 백엔드 프레임워크
