@@ -40,7 +40,7 @@ public class CourseServiceImpl implements CourseService {
 		saveCourseAndSchedules(3, 2, 2, 4, 0, 6, 7);
 		saveCourseAndSchedules(3, 3, 2, 3, 3, 6, 7);
 		saveCourseAndSchedules(4, 4, 4, 0, 0, 2, 2, 1, 2, 1, 2);
-		saveCourseAndSchedules(4, 4, 4, 1, 1, 3, 3, 1, 2, 1, 2);
+		saveCourseAndSchedules(4, 4, 4, 1, 1, 3, 3, 4, 5, 4, 5);
 		saveCourseAndSchedules(4, 4, 4, 1, 1, 3, 3, 7, 8, 7, 8);
 		saveCourseAndSchedules(5, 5, 5, 1, 1, 3, 3, 3, 4, 3, 4);
 		saveCourseAndSchedules(5, 5, 5, 0, 0, 2, 2, 3, 4, 3, 4);

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Timetable</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+</head>
+<body>
+	<div id="app" class="w3-container">
+		
+
+		<h2>Available Timetables ({{ count }})</h2>
+		<ul class="w3-ul w3-border">
+		<div v-for="(timetable, index) in timetables">
+			<li class="w3-btn w3-block w3-theme-l5 w3-left-align" v-on:click="open" >Timetable #{{index+1}}</li>
+			<div class="w3-container w3-hide w3-padding-24" v-bind:class="{ 'w3-show': isActive }">
+				<table class="w3-table w3-bordered w3-border w3-centered">
+					<tr>
+						<th></th>
+						<th>MON</th>
+						<th>TUE</th>
+						<th>WED</th>
+						<th>THU</th>
+						<th>FRI</th>
+					</tr>
+					<tr>
+						<th>1<br>(09:00-09:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][1]}">{{!timetable[0] ? '' : timetable[0][1]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][1]}">{{!timetable[1] ? '' : timetable[1][1]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][1]}">{{!timetable[2] ? '' : timetable[2][1]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][1]}">{{!timetable[3] ? '' : timetable[3][1]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][1]}">{{!timetable[4] ? '' : timetable[4][1]}}</td>
+					</tr>
+					<tr>
+						<th>2<br>(10:00-10:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][2]}">{{!timetable[0] ? '' : timetable[0][2]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][2]}">{{!timetable[1] ? '' : timetable[1][2]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][2]}">{{!timetable[2] ? '' : timetable[2][2]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][2]}">{{!timetable[3] ? '' : timetable[3][2]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][2]}">{{!timetable[4] ? '' : timetable[4][2]}}</td>
+					</tr>
+					<tr>
+						<th>3<br>(11:00-11:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][3]}">{{!timetable[0] ? '' : timetable[0][3]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][3]}">{{!timetable[1] ? '' : timetable[1][3]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][3]}">{{!timetable[2] ? '' : timetable[2][3]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][3]}">{{!timetable[3] ? '' : timetable[3][3]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][3]}">{{!timetable[4] ? '' : timetable[4][3]}}</td>
+					</tr>
+					<tr>
+						<th>4<br>(12:00-12:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][4]}">{{!timetable[0] ? '' : timetable[0][4]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][4]}">{{!timetable[1] ? '' : timetable[1][4]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][4]}">{{!timetable[2] ? '' : timetable[2][4]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][4]}">{{!timetable[3] ? '' : timetable[3][4]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][4]}">{{!timetable[4] ? '' : timetable[4][4]}}</td>
+					</tr>
+					<tr>
+						<th>5<br>(09:00-09:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][5]}">{{!timetable[0] ? '' : timetable[0][5]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][5]}">{{!timetable[1] ? '' : timetable[1][5]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][5]}">{{!timetable[2] ? '' : timetable[2][5]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][5]}">{{!timetable[3] ? '' : timetable[3][5]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][5]}">{{!timetable[4] ? '' : timetable[4][5]}}</td>
+					</tr>
+					<tr>
+						<th>6<br>(10:00-10:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][6]}">{{!timetable[0] ? '' : timetable[0][6]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][6]}">{{!timetable[1] ? '' : timetable[1][6]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][6]}">{{!timetable[2] ? '' : timetable[2][6]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][6]}">{{!timetable[3] ? '' : timetable[3][6]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][6]}">{{!timetable[4] ? '' : timetable[4][6]}}</td>
+					</tr>
+					<tr>
+						<th>7<br>(11:00-11:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][7]}">{{!timetable[0] ? '' : timetable[0][7]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][7]}">{{!timetable[1] ? '' : timetable[1][7]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][7]}">{{!timetable[2] ? '' : timetable[2][7]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][7]}">{{!timetable[3] ? '' : timetable[3][7]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][7]}">{{!timetable[4] ? '' : timetable[4][7]}}</td>
+					</tr>
+					<tr>
+						<th>8<br>(12:00-12:50)
+						</th>
+						<td v-bind:class="{'w3-theme':!timetable[0]?false:timetable[0][8]}">{{!timetable[0] ? '' : timetable[0][8]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[1]?false:timetable[1][8]}">{{!timetable[1] ? '' : timetable[1][8]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[2]?false:timetable[2][8]}">{{!timetable[2] ? '' : timetable[2][8]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[3]?false:timetable[3][8]}">{{!timetable[3] ? '' : timetable[3][8]}}</td>
+						<td v-bind:class="{'w3-theme':!timetable[4]?false:timetable[4][8]}">{{!timetable[4] ? '' : timetable[4][8]}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		</ul>
+	</div>
+	<div class="w3-container">
+		<button class="w3-button w3-block">Back</button>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="/config.js"></script>
+	<script src="/main.js"></script>
+</body>
+</html>
